@@ -41,6 +41,15 @@ Analyzed a simulated web-server compromise involving brute-force access to a pri
 
 [View project](./projects/security-incident-analysis/web-server-compromise-malicious-redirect/)
 
+---
+
+### Security Risk Assessment: Network Hardening and Access Control
+
+Conducted a simulated post-breach security risk assessment focused on authentication, privileged access, firewall policy, and network hardening. Identified security weaknesses and developed prioritized controls for reducing future unauthorized-access risk.
+
+**Skills:** Security risk assessment, network hardening, access-control analysis, MFA, firewall policy, traffic filtering, least privilege, RBAC, ACLs, remediation prioritization
+
+[View project](./projects/security-risk-assessment/network-hardening-access-control/)
 ## Skills Demonstrated
 
 - Security auditing
@@ -62,6 +71,14 @@ Analyzed a simulated web-server compromise involving brute-force access to a pri
 - HTTP traffic analysis
 - Evidence correlation
 - Root-cause analysis
+- Security risk assessment
+- Network hardening
+- Identity and authentication security
+- Multi-factor authentication
+- Firewall policy development
+- Traffic-filtering analysis
+- Role-based access control
+- Access-control lists
 
 ## Portfolio Development
 
