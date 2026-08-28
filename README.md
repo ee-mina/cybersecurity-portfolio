@@ -50,6 +50,9 @@ Conducted a simulated post-breach security risk assessment focused on authentica
 **Skills:** Security risk assessment, network hardening, access-control analysis, MFA, firewall policy, traffic filtering, least privilege, RBAC, ACLs, remediation prioritization
 
 [View project](./projects/security-risk-assessment/network-hardening-access-control/)
+
+---
+
 ## Skills Demonstrated
 
 - Security auditing
@@ -66,7 +69,6 @@ Conducted a simulated post-breach security risk assessment focused on authentica
 - Technical documentation
 - Remediation planning
 - Web-server compromise analysis
-- Authentication security
 - Brute-force attack analysis
 - HTTP traffic analysis
 - Evidence correlation
