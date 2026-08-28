@@ -31,6 +31,16 @@ Analyzed TCP connection behavior and packet activity to identify a SYN flood den
 
 [View project](./projects/network-incident-analysis/tcp-syn-flood/)
 
+---
+
+### Security Incident Analysis: Web Server Compromise and Malicious Redirect
+
+Analyzed a simulated web-server compromise involving brute-force access to a privileged account, malicious source-code modification, distribution of a harmful executable, and redirection of website visitors to a second domain.
+
+**Skills:** Web-server compromise analysis, authentication security, brute-force attack analysis, TCP/IP, DNS, HTTP traffic analysis, evidence correlation, root-cause analysis, remediation planning
+
+[View project](./projects/security-incident-analysis/web-server-compromise-malicious-redirect/)
+
 ## Skills Demonstrated
 
 - Security auditing
@@ -46,6 +56,12 @@ Analyzed TCP connection behavior and packet activity to identify a SYN flood den
 - SOC controls
 - Technical documentation
 - Remediation planning
+- Web-server compromise analysis
+- Authentication security
+- Brute-force attack analysis
+- HTTP traffic analysis
+- Evidence correlation
+- Root-cause analysis
 
 ## Portfolio Development
 
