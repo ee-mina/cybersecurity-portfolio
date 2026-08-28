@@ -47,15 +47,6 @@ Analyzed TCP connection behavior and packet activity to identify a SYN flood den
 - Technical documentation
 - Remediation planning
 
-## Supporting Resources
-
-Reusable tools and methodologies developed from my security-analysis work:
-
-- Network Incident Analysis Report Template
-- Network Incident Analysis Methodology
-
-These resources are included as supporting materials rather than primary portfolio projects.
-
 ## Portfolio Development
 
 Additional projects will be added as I continue developing practical experience in areas including:
