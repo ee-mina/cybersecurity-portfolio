@@ -117,7 +117,7 @@ Recommended ongoing practices include:
 
 ## Completed Assessment
 
-[View the completed risk assessment](./security-risk-assessment-network-hardening-access-control.pdf)
+[View the completed risk assessment](./network-hardening-security-risk-assessment.pdf)
 
 ## Project Context
 
