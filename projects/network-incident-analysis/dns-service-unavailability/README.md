@@ -2,67 +2,45 @@
 
 ## Overview
 
-This project demonstrates the investigation of a simulated website-access incident using captured network traffic.
+I investigated a simulated website-access failure using captured DNS, UDP, and ICMP traffic to determine where the connection process broke down and what should be checked next.
 
-I analyzed DNS, UDP, and ICMP activity to determine where the connection process failed, identify what the available evidence established, and develop a working hypothesis without overstating the root cause.
+The evidence showed that the failure occurred during DNS resolution, before the client could establish an HTTPS connection to the website.
 
-## Incident Summary
+## Incident Findings
 
-Users were unable to access a website and received a destination port unreachable error.
+The client at `192.51.100.15` repeatedly sent DNS A-record queries to the DNS server at `203.0.113.2` over UDP port 53.
 
-Network traffic captured during the incident showed that DNS queries sent over UDP port 53 were unsuccessful. Instead of receiving the requested IP address, the client received an ICMP Destination Unreachable response indicating that UDP port 53 was unreachable.
+Instead of receiving the requested IP address, the client received ICMP Destination Unreachable responses indicating that UDP port 53 was unreachable.
 
-Because DNS resolution could not be completed, the client could not obtain the website's IP address and therefore could not proceed with an HTTPS connection.
+The DNS request was attempted three times with the same result.
 
-## Technical Analysis
+## Impact
 
-The packet capture showed:
+Because the domain name could not be resolved to an IP address, the client could not continue to the HTTPS stage of the connection.
 
-- DNS A-record queries sent over UDP
-- Client IP: `192.51.100.15`
-- DNS server IP: `203.0.113.2`
-- UDP source port: `52444`
-- DNS destination port: `53`
-- ICMP Destination Unreachable responses
-- Three repeated DNS query attempts with the same result
+For the user, the result was simple: the website could not be reached.
 
-The traffic established that the failure occurred during DNS resolution, before an HTTPS connection to the website could be initiated.
+## Working Hypothesis
 
-## Evidence and Interpretation
-
-### Observed
-
-The client repeatedly sent DNS queries to UDP port 53 and received ICMP responses indicating that the destination port was unreachable.
-
-### Confirmed Meaning
-
-The DNS service was unavailable through UDP port 53 during the captured connection attempts.
-
-### Operational Impact
-
-The client could not resolve the domain name to an IP address, preventing the connection process from progressing to HTTPS.
-
-### Working Hypothesis
+The packet capture established that DNS service over UDP port 53 was unavailable during the connection attempts.
 
 Possible causes included:
 
 - The DNS service had stopped or crashed
-- The DNS service was misconfigured
+- The service was misconfigured
 - The service was not listening on UDP port 53
-- Firewall rules were blocking or rejecting DNS traffic
+- A firewall was blocking or rejecting DNS traffic
 
-The available packet capture did not confirm the underlying root cause.
+The next step would be to verify the DNS service directly rather than infer the underlying cause from packet traffic alone.
 
 ## Recommended Verification
 
-Further investigation should include:
-
-- Verifying that the DNS service is running
-- Confirming that the service is listening on UDP port 53
-- Reviewing DNS server logs
-- Reviewing DNS configuration
-- Checking firewall rules affecting DNS traffic
-- Collecting additional traffic or system evidence if necessary
+- Confirm the DNS service is running
+- Confirm it is listening on UDP port 53
+- Review DNS server logs
+- Review DNS configuration
+- Check firewall rules affecting DNS traffic
+- Collect additional system or network evidence if needed
 
 ## Skills Demonstrated
 
@@ -71,10 +49,9 @@ Further investigation should include:
 - UDP analysis
 - ICMP interpretation
 - tcpdump analysis
-- Incident investigation
 - Failure-point identification
-- Evidence-versus-inference reasoning
-- Root-cause hypothesis development
+- Incident investigation
+- Evidence-based troubleshooting
 - Technical documentation
 
 ## Completed Analysis
@@ -83,4 +60,4 @@ Further investigation should include:
 
 ## Project Context
 
-This project was completed in a simulated educational environment. The scenario and packet-capture information were provided for analysis; the investigation, technical interpretation, working hypothesis, and portfolio report presented here reflect my work.
+This work was completed in a simulated educational environment. The scenario and packet-capture data were provided; the technical interpretation, troubleshooting approach, and portfolio report reflect my work.
