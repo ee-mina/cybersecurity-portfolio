@@ -2,74 +2,56 @@
 
 ## Overview
 
-This project demonstrates the analysis of a simulated denial-of-service incident affecting a web server.
+I analyzed a simulated denial-of-service incident in which a web server received an unusually high volume of TCP SYN requests and legitimate users began experiencing slow responses and connection timeouts.
 
-I reviewed TCP packet activity to identify abnormal connection behavior, determine the attack type, and explain how the attack disrupted legitimate access to the website.
+The traffic pattern was consistent with a TCP SYN flood.
 
-## Incident Summary
+## Incident Findings
 
-The web server experienced slow response times and connection timeout errors while receiving an unusually large volume of TCP SYN requests.
+The packet capture showed repeated SYN requests from `203.0.113.0` to the web server at `192.0.2.1`.
 
-The packet activity showed repeated SYN requests from an unfamiliar source IP address. The server responded with SYN-ACK packets, but the connections were not completed normally.
+The server responded with SYN-ACK packets, but many connection attempts did not receive the expected final ACK.
 
-This pattern is consistent with a **TCP SYN flood**, a denial-of-service attack that consumes server resources by creating large numbers of incomplete TCP connections.
+As those incomplete connections accumulated, server resources remained tied up waiting for sessions that were never completed.
 
-## Technical Analysis
+## Impact
 
-A normal TCP connection uses a three-way handshake:
+The growing number of half-open connections reduced the resources available for legitimate clients.
 
-1. The client sends a SYN request.
-2. The server responds with SYN-ACK.
-3. The client sends a final ACK to establish the connection.
+This resulted in degraded response times, connection timeouts, and the potential for the website or sales page to become unavailable if the traffic continued.
 
-During the incident, large numbers of SYN requests were sent without the connection process being completed normally.
+## Attack Classification
 
-As incomplete connections accumulated, server resources that would normally be available to legitimate users were consumed.
+The combination of:
 
-## Evidence and Interpretation
+- High-volume SYN traffic
+- SYN-ACK responses
+- Unfinished TCP connections
+- Resource exhaustion
+- Availability problems
 
-### Observed
-
-The packet capture showed:
-
-- Repeated TCP SYN requests
-- SYN-ACK responses from the server
-- Incomplete connection attempts
-- A high volume of connection requests from an unfamiliar source IP address
-- Website connection timeouts and degraded availability
-
-### Confirmed Meaning
-
-The server was receiving abnormal TCP connection requests that were not completing the normal three-way handshake.
-
-### Operational Impact
-
-The buildup of incomplete connections reduced the server's ability to establish legitimate TCP sessions, resulting in slow response times and connection timeout errors.
-
-### Attack Classification
-
-The observed behavior is consistent with a **denial-of-service (DoS) attack, specifically a TCP SYN flood**.
+is consistent with a **TCP SYN flood denial-of-service attack**.
 
 ## Recommended Mitigation
 
-Potential mitigation measures include:
+Appropriate protections include:
 
-- Implementing SYN flood protections
-- Configuring SYN cookies where appropriate
-- Applying connection-rate limits
-- Monitoring abnormal SYN traffic
-- Using firewall or intrusion-prevention rules to identify and restrict malicious connection attempts
-- Establishing alert thresholds for abnormal TCP connection activity
+- SYN flood protection
+- SYN cookies where appropriate
+- Connection-rate limiting
+- Monitoring for abnormal SYN traffic
+- Firewall or intrusion-prevention rules targeting malicious connection patterns
+- Alert thresholds for unusual TCP connection activity
 
 ## Skills Demonstrated
 
 - TCP/IP analysis
-- TCP three-way handshake analysis
+- TCP connection analysis
 - SYN flood identification
 - Denial-of-service analysis
 - Packet-traffic interpretation
-- Incident investigation
 - Network availability analysis
+- Incident investigation
 - Technical documentation
 
 ## Completed Analysis
@@ -78,4 +60,4 @@ Potential mitigation measures include:
 
 ## Project Context
 
-This project was completed in a simulated educational environment. The scenario and packet-capture information were provided for analysis; the attack identification, technical interpretation, and portfolio report presented here reflect my work.
+This work was completed in a simulated educational environment. The scenario and packet-capture data were provided; the attack identification, technical interpretation, and portfolio report reflect my work.
