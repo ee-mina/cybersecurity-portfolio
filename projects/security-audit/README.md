@@ -115,7 +115,7 @@ These measures would reduce exposure to unauthorized access, data loss, undetect
 
 ## Completed Assessment
 
-[View the completed audit report](./internal-security-audit-controls-and-compliance-assessment.pdf)
+[View the completed audit report](./internal-security-audit-controls-compliance-assessment.pdf)
 
 ## Project Context
 
