@@ -4,89 +4,56 @@
 
 ## Overview
 
-This project demonstrates an internal security audit conducted for a simulated organization. I reviewed the organization’s existing security controls, risk assessment, and selected compliance best practices to identify control gaps and recommend remediation priorities.
+I reviewed a simulated organization's existing security safeguards, source risk assessment, and selected compliance practices to determine where controls were effective, where meaningful gaps remained, and which improvements deserved priority.
 
-The source risk assessment assigned the organization an overall risk score of **8 out of 10**, indicating significant exposure related to asset management, access control, data protection, business continuity, and compliance practices.
+The source assessment rated overall risk at **8 out of 10**, with exposure across asset management, access control, data protection, business continuity, and compliance.
 
 ## Audit Scope
 
-The assessment considered the organization’s:
+The review covered:
 
 - Employee devices and workstations
-- Internal network and systems
+- Internal networks and systems
 - Data storage and retention
 - E-commerce and accounting systems
-- Physical offices, storefront, and warehouse
+- Physical facilities
 - Legacy systems
-- Existing technical, administrative, and physical security controls
-
-## Assessment Areas
-
-The audit evaluated controls related to:
-
-- Least privilege
-- Separation of duties
-- Password security
-- Firewall protection
-- Intrusion detection
-- Backups and disaster recovery
-- Antivirus protection
-- Encryption
-- Password management
-- Legacy-system maintenance
-- Physical security controls
-
-The assessment also reviewed selected best practices associated with:
-
-- PCI DSS
-- GDPR
-- SOC controls
+- Technical, administrative, and physical safeguards
 
 ## Key Findings
 
-Several security controls were already in place, including:
+Existing protections included firewall controls, antivirus software, physical locks, CCTV surveillance, fire-protection systems, and data-integrity controls.
 
-- Firewall protection
-- Antivirus software
-- Physical locks
-- CCTV surveillance
-- Fire detection and prevention systems
-- Data-integrity controls
-- GDPR breach-notification procedures
+The more significant gaps involved:
 
-Significant control gaps included:
+- Least privilege and separation of duties
+- Excessive access to internal and customer data
+- Encryption of cardholder data and PII/SPII
+- Intrusion detection
+- Backups and disaster recovery
+- Password requirements and centralized password management
+- Asset classification
+- Consistent legacy-system maintenance
 
-- Least privilege was not implemented
-- Separation of duties was not implemented
-- Employees had excessive access to internal and customer data
-- Cardholder data and PII/SPII were not encrypted
-- No intrusion detection system was installed
-- Critical data was not backed up
-- No disaster recovery plan was in place
-- Password requirements were insufficient
-- No centralized password management system was implemented
-- Asset classification was incomplete
-- Legacy-system maintenance lacked a consistent schedule and documented procedures
-
-## Compliance Findings
+## Compliance Review
 
 ### PCI DSS
 
-The assessment identified gaps in all reviewed practices, including restricted access to cardholder information, secure handling of payment data, encryption, and password management.
+The reviewed practices showed gaps in access restriction, secure handling of payment information, encryption, and password management.
 
 ### GDPR
 
-The organization had a breach-notification process and established privacy procedures. However, customer data protection and asset classification required improvement.
+Breach-notification and privacy procedures were present, while customer-data protection and asset classification still required improvement.
 
 ### SOC Controls
 
-Data-integrity controls were present, but access restrictions, protection of sensitive PII/SPII, and authorization controls required improvement.
+Data-integrity controls were present, but access restrictions, sensitive-data protection, and authorization controls remained areas for remediation.
 
 ## Recommendations
 
-Remediation should begin with completing asset classification and maintaining an accurate asset inventory.
+The first priority is to complete asset classification and maintain an accurate asset inventory.
 
-Priority should then be given to:
+Additional priorities include:
 
 - Implementing least privilege
 - Establishing separation of duties
@@ -95,10 +62,10 @@ Priority should then be given to:
 - Encrypting cardholder data and PII/SPII
 - Establishing tested backups
 - Creating a disaster recovery plan
-- Implementing an intrusion detection system
-- Formalizing recurring maintenance procedures for legacy systems
+- Implementing intrusion detection
+- Formalizing recurring maintenance for legacy systems
 
-These measures would reduce exposure to unauthorized access, data loss, undetected security events, compliance-related penalties, and business disruption.
+These controls would reduce exposure to unauthorized access, data loss, undetected security events, compliance penalties, and operational disruption.
 
 ## Skills Demonstrated
 
@@ -119,4 +86,4 @@ These measures would reduce exposure to unauthorized access, data loss, undetect
 
 ## Project Context
 
-This project was completed in a simulated educational environment. Botium Toys is a fictional organization. The scenario and source risk information were provided for analysis; the audit findings, assessment, and portfolio report presented here reflect my work.
+This work was completed in a simulated educational environment using the fictional organization Botium Toys. The scenario and source risk information were provided; the assessment, findings, prioritization, and portfolio report reflect my work.
