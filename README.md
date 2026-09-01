@@ -1,33 +1,36 @@
 # Cybersecurity Portfolio
 
-A collection of hands-on cybersecurity projects demonstrating practical skills in security auditing, network analysis, incident investigation, risk assessment, and technical documentation.
+A collection of hands-on cybersecurity work focused on security auditing, network analysis, incident response, risk assessment, access control, and technical documentation.
 
-This portfolio is being developed alongside my cybersecurity training and contains polished versions of projects completed in simulated security environments. Each project focuses on the analysis, reasoning, and recommendations I produced based on the scenario and evidence provided.
+The projects in this portfolio are based on simulated security environments and case studies. Each one shows how I interpret technical evidence, identify meaningful security issues, assess operational impact, and translate findings into practical recommendations.
 
 ## Featured Projects
 
 ### Internal Security Audit: Controls and Compliance Assessment
-Conducted a simulated internal security audit by evaluating technical, administrative, and physical controls, identifying control gaps, reviewing compliance best practices, and prioritizing remediation.
 
-**Skills:** Security auditing, risk assessment, access-control evaluation, PCI DSS, GDPR, SOC controls, remediation planning
+Reviewed an organization's technical, administrative, and physical safeguards to identify control gaps, evaluate selected compliance practices, and prioritize remediation based on business and security risk.
+
+**Focus:** Security auditing, controls assessment, risk prioritization, PCI DSS, GDPR, SOC controls
 
 [View project](./projects/security-audit/)
 
 ---
 
 ### Network Incident Analysis: DNS Service Unavailability
-Analyzed DNS, UDP, and ICMP traffic to identify the point of failure during a simulated website-access incident and develop an evidence-based working hypothesis.
 
-**Skills:** Network traffic analysis, DNS, UDP, ICMP, tcpdump, incident investigation, technical reporting
+Investigated a website-access failure using DNS, UDP, and ICMP traffic. Identified DNS resolution as the point of failure and developed a technically supported working hypothesis for further investigation.
+
+**Focus:** Network traffic analysis, DNS, UDP, ICMP, tcpdump, troubleshooting
 
 [View project](./projects/network-incident-analysis/dns-service-unavailability/)
 
 ---
 
 ### Network Incident Analysis: TCP SYN Flood
-Analyzed TCP connection behavior and packet activity to identify a SYN flood denial-of-service attack and explain its effect on legitimate users and server resources.
 
-**Skills:** TCP/IP, three-way handshake analysis, SYN flood identification, denial-of-service analysis, incident reporting
+Analyzed abnormal TCP connection activity associated with a SYN flood denial-of-service attack and explained how incomplete connections consumed server resources and disrupted legitimate access.
+
+**Focus:** TCP/IP, SYN flood analysis, denial-of-service, packet interpretation, network availability
 
 [View project](./projects/network-incident-analysis/tcp-syn-flood/)
 
@@ -35,9 +38,9 @@ Analyzed TCP connection behavior and packet activity to identify a SYN flood den
 
 ### Security Incident Analysis: Web Server Compromise and Malicious Redirect
 
-Analyzed a simulated web-server compromise involving brute-force access to a privileged account, malicious source-code modification, distribution of a harmful executable, and redirection of website visitors to a second domain.
+Reconstructed a web-server compromise involving weak privileged authentication, malicious source-code modification, a harmful executable, and redirection of visitors to a second domain.
 
-**Skills:** Web-server compromise analysis, authentication security, brute-force attack analysis, TCP/IP, DNS, HTTP traffic analysis, evidence correlation, root-cause analysis, remediation planning
+**Focus:** Incident investigation, authentication security, HTTP traffic analysis, evidence correlation, root-cause analysis
 
 [View project](./projects/security-incident-analysis/web-server-compromise-malicious-redirect/)
 
@@ -45,53 +48,79 @@ Analyzed a simulated web-server compromise involving brute-force access to a pri
 
 ### Security Risk Assessment: Network Hardening and Access Control
 
-Conducted a simulated post-breach security risk assessment focused on authentication, privileged access, firewall policy, and network hardening. Identified security weaknesses and developed prioritized controls for reducing future unauthorized-access risk.
+Assessed authentication, privileged-access, firewall, and access-control weaknesses following a simulated data breach and developed prioritized controls to reduce future unauthorized-access risk.
 
-**Skills:** Security risk assessment, network hardening, access-control analysis, MFA, firewall policy, traffic filtering, least privilege, RBAC, ACLs, remediation prioritization
+**Focus:** Security risk assessment, network hardening, MFA, firewall policy, least privilege, RBAC, ACLs
 
 [View project](./projects/security-risk-assessment/network-hardening-access-control/)
 
 ---
 
+### NIST CSF 2.0 Incident Response Analysis: ICMP Flood Denial-of-Service
+
+Applied the NIST Cybersecurity Framework 2.0 to a simulated ICMP flood incident, connecting governance, protection, detection, response, and recovery decisions to concrete improvements in firewall configuration, monitoring, and incident readiness.
+
+**Focus:** NIST CSF 2.0, incident response, ICMP flood analysis, IDS/IPS, network monitoring, recovery planning
+
+[View project](./projects/incident-response/nist-csf-2-0-icmp-flood/)
+
+---
+
 ## Skills Demonstrated
 
-- Security auditing
-- Risk identification and prioritization
+### Network Security and Analysis
+
 - Network traffic analysis
-- Incident investigation
 - TCP/IP
 - DNS, UDP, ICMP, and HTTP/S
+- TCP three-way handshake analysis
+- Denial-of-service analysis
+- DNS troubleshooting
+- Packet and protocol interpretation
+- Network hardening
+- Firewall policy development
+- Traffic-filtering analysis
+
+### Incident Investigation and Response
+
+- Incident investigation
+- Web-server compromise analysis
+- Brute-force attack analysis
+- Evidence correlation
+- Root-cause analysis
+- Incident containment
+- Network monitoring and alerting
+- IDS/IPS concepts
+- Incident response planning
+- Recovery planning
+
+### Risk, Controls, and Access Management
+
+- Security auditing
+- Security risk assessment
+- Risk identification and prioritization
 - Security controls assessment
 - Access-control evaluation
+- Identity and authentication security
+- Multi-factor authentication
+- Least privilege
+- Role-based access control
+- Access-control lists
+- Remediation planning
+
+### Governance and Compliance
+
+- NIST Cybersecurity Framework 2.0
 - PCI DSS
 - GDPR
 - SOC controls
+
+### Communication
+
 - Technical documentation
-- Remediation planning
-- Web-server compromise analysis
-- Brute-force attack analysis
-- HTTP traffic analysis
-- Evidence correlation
-- Root-cause analysis
-- Security risk assessment
-- Network hardening
-- Identity and authentication security
-- Multi-factor authentication
-- Firewall policy development
-- Traffic-filtering analysis
-- Role-based access control
-- Access-control lists
-
-## Portfolio Development
-
-Additional projects will be added as I continue developing practical experience in areas including:
-
-- Linux security and file permissions
-- SQL security analysis
-- Vulnerability assessment
-- Incident response documentation
-- Python security automation
+- Evidence-based security reporting
+- Translating technical findings into actionable recommendations
 
 ## Project Context
 
-Projects in this portfolio were completed in simulated educational environments. Scenario materials and fictional organizations were provided for analysis; the portfolio reports, findings, reasoning, and recommendations presented here reflect my own work.
+Projects in this portfolio were completed in simulated educational environments. Scenario materials and fictional organizations were provided for analysis; the investigation, interpretation, findings, recommendations, and portfolio reports presented here reflect my work.
