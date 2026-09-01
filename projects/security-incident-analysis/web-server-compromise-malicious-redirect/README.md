@@ -2,72 +2,56 @@
 
 ## Overview
 
-This project examines a simulated web-server compromise in which unauthorized administrative access led to malicious source-code modification, distribution of a harmful executable, and redirection of website visitors to a second domain.
+I investigated a simulated web-server compromise involving unauthorized administrative access, malicious source-code modification, a harmful executable, and redirection of website visitors to a second domain.
 
-I analyzed packet-capture evidence alongside source-code and downloaded-file findings to reconstruct the incident, identify the root cause, assess the impact, and recommend security improvements.
+The investigation combined network traffic, source-code review, and downloaded-file analysis to reconstruct how a weak privileged account led to a broader application and end-user security incident.
 
-## Incident Summary
+## Incident Findings
 
-A former employee gained unauthorized administrative access to a website through a brute-force attack against an account that was still using a default password.
+A former employee gained administrative access through repeated password attempts against an account that still used a default credential.
 
-After gaining access, the attacker:
+After obtaining access, the attacker:
 
 - Modified the website's source code
-- Added malicious JavaScript prompting visitors to download an executable file
+- Added JavaScript that prompted visitors to download an executable
 - Changed the administrative password
-- Caused affected visitors to be redirected to another domain
+- Caused affected users to be redirected to a second domain
 
-Users who ran the downloaded file reported slower computer performance, while the website owner lost access to the administrative panel.
+Customers who ran the file reported slower computer performance, while the legitimate site owner lost access to the administrative panel.
 
 ## Technical Analysis
 
-The packet capture showed the client first resolving and connecting to the legitimate website.
+The network capture showed normal DNS, TCP, and HTTP communication with `yummyrecipesforme.com`, followed later by DNS resolution and a separate HTTP connection to `greatrecipesforme.com`.
 
-Observed activity included:
+Source-code review identified the JavaScript responsible for prompting the download, and analysis of the executable identified the redirect behavior.
 
-- DNS resolution for `yummyrecipesforme.com`
-- Resolution to `203.0.113.22`
-- TCP connection to HTTP port 80
-- Standard TCP three-way handshake
-- HTTP `GET / HTTP/1.1` request
+Together, the evidence connected the privileged-account compromise to the malicious website changes and redirect activity.
 
-Later, the client performed a separate DNS lookup for `greatrecipesforme.com`, which resolved to `192.0.2.172`, followed by a new TCP connection to port 80.
+## Root Cause and Impact
 
-The packet capture confirmed communication with the second domain but did not independently establish why the redirect occurred.
+The primary security failure was weak privileged authentication.
 
-Source-code review identified malicious JavaScript responsible for prompting the download, while analysis of the downloaded file identified redirect functionality. Together, these findings connected the web-server compromise to the malicious redirect.
+A default administrative password remained in use, and protections against repeated authentication attempts were insufficient. Once the attacker obtained administrative access, the account's privileges allowed high-impact changes to the production website.
 
-## Root Cause
+The incident resulted in:
 
-The primary cause of the incident was weak privileged-account security.
-
-The administrative account still used a known default password, and protections against repeated authentication attempts were insufficient. This allowed the attacker to successfully guess the credential and obtain administrative access.
-
-Because the compromised account had permission to modify the website, the attacker was able to make high-impact changes after authentication.
-
-## Impact
-
-The compromise resulted in:
-
-- Unauthorized modification of production source code
-- Loss of administrative access for the legitimate website owner
+- Unauthorized source-code modification
+- Loss of legitimate administrative access
 - Exposure of visitors to a malicious executable
-- Redirection of users to a malicious domain
-- Reported degradation of affected users' computer performance
-- Increased application and end-user security risk
+- Redirection to a malicious domain
+- Reported performance degradation on affected systems
 
 ## Security Recommendations
 
-Recommended remediation includes:
+Priority improvements include:
 
 - Require MFA for privileged accounts
 - Eliminate default and weak credentials
-- Apply authentication rate limiting or temporary lockouts
-- Monitor successful and failed administrative authentication attempts
-- Apply least privilege and reduce unnecessary administrative exposure
-- Use HTTPS/TLS to strengthen protection of web traffic in transit
-
-HTTPS would improve the site's overall security but would not prevent the brute-force credential attack that caused this incident.
+- Apply authentication rate limiting, delays, or carefully configured temporary lockouts
+- Monitor successful and failed administrative login attempts
+- Apply least privilege
+- Restrict administrative interfaces where practical
+- Use HTTPS/TLS as part of broader web hardening
 
 ## Skills Demonstrated
 
@@ -75,9 +59,7 @@ HTTPS would improve the site's overall security but would not prevent the brute-
 - Web-server compromise analysis
 - Authentication security
 - Brute-force attack analysis
-- TCP/IP analysis
-- DNS analysis
-- HTTP traffic analysis
+- DNS, TCP, and HTTP traffic analysis
 - tcpdump interpretation
 - Evidence correlation
 - Root-cause analysis
@@ -90,4 +72,4 @@ HTTPS would improve the site's overall security but would not prevent the brute-
 
 ## Project Context
 
-This project was completed in a simulated educational environment. Scenario, packet-capture, source-code, and file-analysis evidence were provided for investigation; the technical analysis, interpretation, root-cause assessment, recommendations, and portfolio report presented here reflect my work.
+This work was completed in a simulated educational environment. Network traffic, source-code evidence, and file-analysis evidence were provided for investigation; the technical interpretation, root-cause assessment, recommendations, and portfolio report reflect my work.
