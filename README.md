@@ -1,8 +1,8 @@
 # Cybersecurity Portfolio
 
-A collection of hands-on cybersecurity work focused on security auditing, network analysis, incident response, risk assessment, access control, and technical documentation.
+A collection of hands-on cybersecurity work focused on security auditing, network analysis, incident response, risk assessment, access control, Linux security, and technical documentation.
 
-The projects in this portfolio are based on simulated security environments and case studies. Each one shows how I interpret technical evidence, identify meaningful security issues, assess operational impact, and translate findings into practical recommendations.
+The projects in this portfolio are based on simulated security environments and case studies. Each one shows how I interpret technical evidence, identify meaningful security issues, assess operational impact, and translate findings into practical recommendations or corrective actions.
 
 ## Featured Projects
 
@@ -58,11 +58,21 @@ Assessed authentication, privileged-access, firewall, and access-control weaknes
 
 ### NIST CSF 2.0 Incident Response Analysis: ICMP Flood Denial-of-Service
 
-Applied the NIST Cybersecurity Framework 2.0 to a simulated ICMP flood incident, connecting governance, protection, detection, response, and recovery decisions to concrete improvements in firewall configuration, monitoring, and incident readiness.
+Applied the NIST Cybersecurity Framework 2.0 to a simulated ICMP flood incident, connecting the six CSF functions—Govern, Identify, Protect, Detect, Respond, and Recover—to practical improvements in firewall configuration, monitoring, incident response, and recovery readiness.
 
 **Focus:** NIST CSF 2.0, incident response, ICMP flood analysis, IDS/IPS, network monitoring, recovery planning
 
 [View project](./projects/incident-response/nist-csf-2-0-icmp-flood/)
+
+---
+
+### Linux File Permissions Review and Remediation
+
+Reviewed file and directory permissions in a simulated Linux environment, identified excessive access, and used Linux commands to correct security weaknesses while preserving authorized access.
+
+**Focus:** Linux command line, file permissions, chmod, access-control remediation, least privilege, permission verification
+
+[View project](./projects/linux-security/file-permissions/)
 
 ---
 
@@ -108,6 +118,13 @@ Applied the NIST Cybersecurity Framework 2.0 to a simulated ICMP flood incident,
 - Access-control lists
 - Remediation planning
 
+### Linux Security
+
+- Linux command-line operations
+- Linux file and directory permissions
+- Permission auditing and remediation
+- Permission verification
+
 ### Governance and Compliance
 
 - NIST Cybersecurity Framework 2.0
@@ -123,4 +140,4 @@ Applied the NIST Cybersecurity Framework 2.0 to a simulated ICMP flood incident,
 
 ## Project Context
 
-Projects in this portfolio were completed in simulated educational environments. Scenario materials and fictional organizations were provided for analysis; the investigation, interpretation, findings, recommendations, and portfolio reports presented here reflect my work.
+Projects in this portfolio were completed in simulated educational environments. Scenario materials and fictional organizations were provided for analysis; the investigation, interpretation, findings, recommendations, corrective actions, and portfolio reports presented here reflect my work.
