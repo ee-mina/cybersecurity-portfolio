@@ -13,10 +13,7 @@ Using the `log_in_attempts` and `employees` tables, I applied SQL filtering cond
 I filtered authentication records to identify unsuccessful login attempts after 18:00.
 
 ```sql
-SELECT *
-FROM log_in_attempts
-WHERE login_time > '18:00'
-  AND success = 0;
+select * from log_in_attempts where login_time > '18:00' and success = 0;
 ```
 
 **Result:** 19 failed login attempts after 18:00.
