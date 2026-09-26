@@ -1,6 +1,6 @@
 # Cybersecurity Portfolio
 
-A collection of hands-on cybersecurity work focused on security auditing, network analysis, incident response, risk assessment, access control, Linux security, and technical documentation.
+A collection of hands-on cybersecurity work focused on security auditing, network analysis, incident response, risk assessment, access control, Linux security, SQL analysis, and technical documentation.
 
 The projects in this portfolio are based on simulated security environments and case studies. Each one shows how I interpret technical evidence, identify meaningful security issues, assess operational impact, and translate findings into practical recommendations or corrective actions.
 
@@ -76,6 +76,16 @@ Reviewed file and directory permissions in a simulated Linux environment, identi
 
 ---
 
+### SQL Filtering: Login Activity and Employee Device Updates
+
+Used SQL to investigate authentication activity and identify employees whose devices required security updates. Applied filtering conditions to retrieve relevant records based on login outcomes, dates, locations, departments, and office assignments.
+
+**Focus:** SQL querying, database filtering, authentication-log analysis, AND/OR/NOT operators, LIKE and wildcard matching, security update planning
+
+[View project](./projects/sql-security/login-activity-employee-device-updates/)
+
+---
+
 ## Skills Demonstrated
 
 ### Network Security and Analysis
@@ -124,6 +134,15 @@ Reviewed file and directory permissions in a simulated Linux environment, identi
 - Linux file and directory permissions
 - Permission auditing and remediation
 - Permission verification
+
+### SQL and Database Analysis
+
+- SQL querying and filtering
+- Database record retrieval
+- Authentication-log analysis
+- Boolean filtering with AND, OR, and NOT
+- Pattern matching with LIKE and wildcards
+- Employee-record filtering for security update planning
 
 ### Governance and Compliance
 
