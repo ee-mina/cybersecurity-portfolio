@@ -86,6 +86,16 @@ Used SQL to investigate authentication activity and identify employees whose dev
 
 ---
 
+### Vulnerability Assessment: Public Database Server
+
+Assessed the risks associated with a publicly exposed remote database server using NIST SP 800-30 Rev. 1. Evaluated threat scenarios by likelihood and severity, then developed access-control and monitoring recommendations based on the identified risks.
+
+**Focus:** Vulnerability assessment, NIST SP 800-30, qualitative risk analysis, threat scenarios, CIA triad, database access controls
+
+[View project](./projects/security-risk-assessment/public-database-server/)
+
+---
+
 ## Skills Demonstrated
 
 ### Network Security and Analysis
@@ -127,6 +137,10 @@ Used SQL to investigate authentication activity and identify employees whose dev
 - Role-based access control
 - Access-control lists
 - Remediation planning
+- Vulnerability assessment
+- NIST SP 800-30 Rev. 1
+- Threat-scenario analysis
+- Qualitative likelihood and severity scoring
 
 ### Linux Security
 
