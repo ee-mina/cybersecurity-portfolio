@@ -66,6 +66,16 @@ Applied the NIST Cybersecurity Framework 2.0 to a simulated ICMP flood incident,
 
 ---
 
+### Incident Response & Investigation Journal
+
+Built and used a reusable incident-response journal across four simulated investigations involving ransomware, malware analysis, phishing triage, and IDS alert analysis. Documented evidence, findings, investigative decisions, escalation, and follow-up using a consistent analyst workflow.
+
+**Focus:** Incident investigation, phishing triage, VirusTotal, IOC analysis, Suricata, security log analysis, alert escalation, incident documentation
+
+[View project](./projects/incident-response/investigation-journal/)
+
+---
+
 ### Linux File Permissions Review and Remediation
 
 Reviewed file and directory permissions in a simulated Linux environment, identified excessive access, and used Linux commands to correct security weaknesses while preserving authorized access.
@@ -123,6 +133,11 @@ Assessed the risks associated with a publicly exposed remote database server usi
 - IDS/IPS concepts
 - Incident response planning
 - Recovery planning
+- Phishing alert triage and escalation
+- Malware and file-hash analysis
+- Indicator-of-compromise analysis
+- VirusTotal analysis
+- Suricata IDS alert and log analysis
 
 ### Risk, Controls, and Access Management
 
