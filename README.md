@@ -2,7 +2,7 @@
 
 A collection of hands-on cybersecurity work focused on security auditing, network analysis, incident response, risk assessment, access control, Linux security, SQL analysis, and technical documentation.
 
-The projects in this portfolio are based on simulated security environments and case studies. Each one shows how I interpret technical evidence, identify meaningful security issues, assess operational impact, and translate findings into practical recommendations or corrective actions.
+These projects were developed through the Google Cybersecurity Professional Certificate and involve simulated security environments and case studies. Each project demonstrates how I approach technical evidence, investigate security issues, assess potential impacts, and document findings and recommendations.
 
 ## Featured Projects
 
